@@ -12,5 +12,8 @@
 		{
 			"path": "..\\Calculator_JS"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "task_organizer"
+	}
 }
