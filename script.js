@@ -62,4 +62,34 @@ switch(today.getUTCMonth()){
         monthvalue="December"
         break;
 }
-dateobj.innerText=dayvalue+", "+(today.getUTCDate()+1)+" "+monthvalue+" "+today.getUTCFullYear();
+dateobj.innerText=dayvalue+", "+(today.getUTCDate())+" "+monthvalue+" "+today.getUTCFullYear();
+console.log(dateobj);
+let taskarray=[];
+function add(){
+    let task=document.getElementById("editor");
+    let val=task.value;
+    if (val == "") {
+        alert("No Task Found to be added !!");
+    }
+     else{
+        //input made empty
+        taskarray.push(val.trim());
+        task.value = '';
+        displayArr();
+    }
+}
+function displayArr(){
+    let taski = '';
+    for(let i=0;i<taskarray.length;i++){
+    taski+="<li>"+(i+1)+". "+"<button onclick='removeList(" + i + ")' class='dele'>delete</button ><input type='checkbox' class='tick' onclick='playaudio()'><label>"+taskarray[i]+"</label> </li>"
+}
+document.getElementById("task").innerHTML=taski;
+}
+function removeList(index){
+    taskarray.splice(index, 1);
+    displayArr();
+}
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+function playaudio(){
+    audio.play();
+}

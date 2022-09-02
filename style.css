@@ -1,32 +1,80 @@
 *{
     margin: 0;
     padding: 0;
-    /* outline:solid 2px black; */
+    /* outline:solid 1px black; */
+    color:#6f32ff;
 }
 body{
-    /* width:100vw; */
+    padding:0% 33% 0% 33%;
     height:100vh;
     background-image: linear-gradient(to bottom right, #c650d7, #359af8);
     background-repeat: no-repeat;
     color:white;
 }
 .card{
-    display:flex;
+    margin-top:3%;
+    display:grid;
     position: fixed;
     width:30vw;
     height:75vh;
-    margin:8vh 33vw 0vh 33vw;
+    grid-template-rows: 15% 70% 10%;
     background-color: #ffffff;
     border-radius: 5%;
 }
 .head-time{
     position: relative;
     color:#6f32ff;
-    top:3vh;
-    left:2.4vw;
+    top:20%;
     text-align: center;
-    font-size: 5vh;
-    width:25vw;
-    height: 8vh;
+    font-size: 200%;
+    height: max-content;
     border-bottom:solid 1px #6f32ff;
+}
+.editor{
+    width:29vw;
+}
+.textbox{
+    position: relative;
+    text-align: center;
+    font-size: 200%;
+    color: #6f32ff;
+    left:1%;
+    height:7vh;
+    width:100%;
+}
+.add_icon{
+    position: fixed;
+    top:78vh;
+    left:46vw;
+}
+.add_icon:hover{
+    transform: translateY(4px);
+    transition-delay: .1s;
+}
+.task{
+    color:black;
+    
+    height: fit-content;
+    min-height:10vh;
+    font-size: xx-large;
+    max-height:99%;
+    overflow-y: auto;
+}
+.task li{
+    list-style: none;
+    margin:2%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border-bottom:solid 1px #6f32ff;
+}
+input:checked + label {
+    text-decoration: line-through;
+  }
+.tick{
+    position: relative;
+    left:80%;
+}
+.dele{
+    position: relative;
+    left:70%;
 }
