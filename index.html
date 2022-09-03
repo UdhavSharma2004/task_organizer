@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Organizer</title>
-    <link rel="icon" href="./images/title_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="icon" href="./images/title_icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="card">
-    <div class="head-time" id="htime">time $ date</div>
-    <div class="task" id="task">
-        <ul>
-            
-        </ul>
+      <div class="head-time" id="htime">time $ date</div>
+      <div class="task" id="task">
+        <audio
+          src="./Sounds/done.mp3"
+          id="bell_sound"
+          type="audio/mpeg"
+        ></audio>
+        <audio src="./Sounds/add.mp3" id="added" type="audio/mpeg"></audio>
+        <ul></ul>
+      </div>
+      <div class="editor">
+        <input
+          class="textbox"
+          id="editor"
+          type="text"
+          placeholder="i want to do .."
+        />
+      </div>
     </div>
-    <div class="editor"><input class="textbox" id="editor" type="text" placeholder="i want to do .."></div>
+    <div>
+      <img
+        class="add_icon"
+        onclick="addaudio(),add()"
+        src="./images/add_icon.png"
+        width="80px"
+      />
     </div>
-    <div ><img class="add_icon" onclick="add()" src="./images/add_icon.png" width="80px"></div>
-</body>
-<script src="./script.js"></script>
+  </body>
+  <script src="./script.js"></script>
 </html>
